@@ -2,6 +2,7 @@ package org.mtransit.parser.ca_toronto_ttc_bus;
 
 import org.mtransit.parser.DefaultAgencyTools;
 import org.mtransit.parser.Utils;
+import org.mtransit.parser.gtfs.data.GRoute;
 
 public class TorontoTTCBusAgencyTools extends DefaultAgencyTools {
 
@@ -23,6 +24,15 @@ public class TorontoTTCBusAgencyTools extends DefaultAgencyTools {
         args[2] = "";
 
         ttcTools.start(args);
+    }
+
+    @Override
+    public boolean excludeRoute(GRoute gRoute) {
+        if (gRoute == null)
+            return false;
+
+        return true;
+
     }
 
 }
