@@ -3,9 +3,9 @@ package org.mtransit.parser.ca_toronto_ttc_bus;
 import org.mtransit.parser.DefaultAgencyTools;
 import org.mtransit.parser.Utils;
 import org.mtransit.parser.gtfs.data.GRoute;
+import org.mtransit.parser.mt.data.MAgency;
 
 public class TorontoTTCBusAgencyTools extends DefaultAgencyTools {
-
     @Override
     public void start(String[] args) {
         System.out.printf("Generating TTC bus data...\n");
@@ -33,4 +33,8 @@ public class TorontoTTCBusAgencyTools extends DefaultAgencyTools {
         return false;
     }
 
+    @Override
+    public Integer getAgencyRouteType() {
+        return MAgency.ROUTE_TYPE_BUS;
+    }
 }
