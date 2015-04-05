@@ -29,10 +29,8 @@ public class TorontoTTCBusAgencyTools extends DefaultAgencyTools {
     @Override
     public boolean excludeRoute(GRoute gRoute) {
         if (gRoute == null)
-            return false;
-
-        return true;
-
+            return true;
+        return false;
     }
 
 }
